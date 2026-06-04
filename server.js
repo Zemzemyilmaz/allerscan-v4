@@ -15,8 +15,7 @@ const PORT = process.env.PORT || 3000;
 const GEMINI_KEY = process.env.GEMINI_KEY;
 
 app.use(express.json({ limit: '10mb' }));
-app.use(express.static(path.join(__dirname, '../public')));
-
+app.use(express.static(path.join(__dirname, '/')));
 // ── Sağlık kontrolü ─────────────────────────────────────────
 app.get('/health', (_req, res) => res.json({ ok: true, version: '4.0' }));
 
